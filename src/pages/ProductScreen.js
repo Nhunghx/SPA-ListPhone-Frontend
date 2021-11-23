@@ -5,7 +5,7 @@ import "./productScreen.css";
 
 function ProductScreen() {
   const { id } = useParams();
-  const [detail, setDetail] = useState([]); 
+  const [detail, setDetail] = useState([]);
 
   useEffect(() => {
     const fetchDetail = async () => {
@@ -20,12 +20,11 @@ function ProductScreen() {
     fetchDetail();
   }, [id]);
 
-
   return (
     <div>
       <span className="back">
-        <Link to="/" style={{textDecoration: 'none'}}>
-           Back
+        <Link to="/" style={{ textDecoration: "none" }}>
+          Back
         </Link>
       </span>
       {detail && (
